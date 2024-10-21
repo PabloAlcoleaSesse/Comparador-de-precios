@@ -5,9 +5,9 @@
 
 using namespace std;
 
-void comparacion(const Producto &p1, const Producto &p2) {
+float comparacion(const Producto &p1, const Producto &p2) {
     if (p1.getPrecio() == p2.getPrecio()){
-        cout << "El producto de menor valor son: " << p2.getNproducto() << ", con un valor de:" << p2.getPrecio();
+        cout << "El producto de menor valor son: " << p2.getNproducto()<<", "<< p1.getNproducto()<< ", con un valor de:" << p2.getPrecio();
         }else if (p1.getPrecio() > p2.getPrecio()){
         cout << "El producto de menor valor es: " << p2.getNproducto() << ", con un valor de:" << p2.getPrecio();
         }else {
