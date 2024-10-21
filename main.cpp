@@ -15,7 +15,7 @@ float comparacion(const Producto &p1, const Producto &p2) {
         }
 
 }
-void pregunta () {
+void pregunta (const Producto p1, const Producto p2) {
     cout << "Hay mas productos a comparar? (Si/No): ";
     string respuesta;
     cin >> respuesta;
@@ -24,13 +24,11 @@ void pregunta () {
 
     }
     else if (respuesta == "no") {
-        Producto p1;
-        Producto p2;
         comparacion(p1, p2);
     }
     else {
         cout << "Por favor, introduzca una respuesta valida";
-        pregunta();
+        pregunta(p1, p2);
     }
 }
 
@@ -56,9 +54,9 @@ int main() {
     cin >> precio_dos;
     p2.setPrecio(precio_dos);
 
-    pregunta();
+    pregunta(p1, p2);
 
-    comparacion(p1, p2);
+
 
 
     return 0;
